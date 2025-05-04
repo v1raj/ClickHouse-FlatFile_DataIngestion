@@ -37,13 +37,13 @@ cd ClickHouse-FlatFile_DataIngestion
 ## 2.Backend
 Make sure node js is installed
 cd backend
-npm init - y
+npm install
 npm run dev
 
 ## 3.Frontend
 Make sure react js is intialized
-cd frontend
-cd clickhouse
+cd frontend/clickhouse
+npm install
 npm start
 
 
