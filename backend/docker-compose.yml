@@ -1,0 +1,17 @@
+version: '3'
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse
+    ports:
+      - "8123:8123"   # HTTPS interface (used by ClickHouse clients)
+      - "8443:8443"   # Native TCP interface (used for CLI)
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+    environment:
+      - CLICKHOUSE_DB=mydb
+      - CLICKHOUSE_USER=myuser
+      - CLICKHOUSE_PASSWORD=mypassword  # Leave empty or set one
+
+volumes:
+  clickhouse-data:
