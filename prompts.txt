@@ -1,0 +1,41 @@
+how do i use the clickhouse client
+how do i run my index.js file
+node:internal/modules/cjs/loader:1147
+  throw err;
+  ^
+
+Error: Cannot find module './routes/connect'
+Require stack:
+- C:\Users\Viraj Sharma\Desktop\clickhouse-app\backend\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (C:\Users\Viraj Sharma\Desktop\clickhouse-app\backend\index.js:10:21)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Viraj Sharma\\Desktop\\clickhouse-app\\backend\\index.js'
+  ]
+}
+
+Node.js v20.10.0
+write the code correctly and give nice snippets whats this dry fromat you have given this to me in
+so clickhouse and flatfile are two separate databases having same columns?
+how do i use the local docker clickhouse instance
+tell me the ui logic and flow for this
+code the ui of this in react and do the necessary backend calls
+'docker-compose' is not recognized as an internal or external command,
+operable program or batch file.
+what does docker do to the clickhouse instance
+do docker autmoatically creates an instance of clickhouse when i create the yml file
+does the clichouse instance contain multiple databases
+how do i solve the data ingestion problem from flat file to clickhouse and clickhouse to  flatfile
+time="2025-05-04T02:55:07+05:30" level=warning msg="C:\\Users\\Viraj Sharma\\Desktop\\clickhouse-app\\backend\\docker-compose.yml: the attribute version is obsolete, it will be ignored, please remove it to avoid potential confusion"
+unable to get image 'clickhouse/clickhouse-server:latest': error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/images/clickhouse/clickhouse-server:latest/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+ok so the clickhouse client is an object through which i can talk to the databases in the clickhouse doker
+write functions for clickhouse client to fetch tables to write to flatfile after reading from clickhouse and reading from flatfile and writing to clickhouse
