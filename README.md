@@ -28,26 +28,26 @@ This is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application t
 
 ## ⚙️ Setup Instructions
 
-##1.Clone the repository
+## 1.Clone the repository
 
 ```bash
 git clone https://github.com/v1raj/ClickHouse-FlatFile_DataIngestion.git
 cd ClickHouse-FlatFile_DataIngestion
 
-##2.Backend
+## 2.Backend
 Make sure node js is installed
 cd backend
 npm init - y
 npm run dev
 
-##3.Frontend
+## 3.Frontend
 Make sure react js is intialized
 cd frontend
 cd clickhouse
 npm start
 
 
-##Instruction for using clickhouse database in the application:
+## Instruction for using clickhouse database in the application:
 For Host field : http://localhost:8123,
     Username field: myuser,
     Password field: mypassword,
