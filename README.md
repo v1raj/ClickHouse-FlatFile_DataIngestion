@@ -10,7 +10,6 @@ This is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application t
 - Connect to ClickHouse and retrieve available tables.
 - Display column names from both sources with checkboxes for selection.
 - Ingest only selected columns from source to target.
-- JWT-based user authentication (if implemented).
 - Full UI in React, backend in Node/Express.
 
 ---
