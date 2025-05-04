@@ -40,7 +40,7 @@ npm install
 npm run dev
 
 ## 3.Frontend
-Make sure react js is intialized
+Make sure react js is setup
 cd frontend/clickhouse
 npm install
 npm start
