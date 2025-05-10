@@ -1,6 +1,6 @@
 # ClickHouse ↔ Flat File Data Ingestion Tool
 
-This is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that enables bi-directional data ingestion between **ClickHouse databases** and **flat files (CSV)**. Users can upload files, preview data, select columns, and ingest data into ClickHouse interactively.
+This is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that enables bi-directional data ingestion between **ClickHouse databases** and **flat files (CSV)**. Users can upload files, preview data, select columns, and ingest data into ClickHouse interactively. Link to video : https://www.loom.com/share/ec3843639cfe42f1ab3b56cd151715c5?sid=d971e58d-2c2f-45a4-979b-b524dac8ee7a
 
 ---
 
