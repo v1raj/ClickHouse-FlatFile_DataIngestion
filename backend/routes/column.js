@@ -1,21 +1,28 @@
+// File: src/routes/column.js
 const express = require('express');
 const router = express.Router();
 const { getClickHouseClient } = require('../utils/clickhouseClient');
-const { parseCSV } = require('../utils/fileUtils');
 
+// POST /column
+// Body: { table: string, config: { host, username, password, database } }
 router.post('/', async (req, res) => {
-  const { source, config, table, filePath, delimiter } = req.body;
+  const { table, config } = req.body;
   try {
-    if (source === 'ClickHouse') {
-      const ch = getClickHouseClient(config);
-      const desc = await ch.query(`DESCRIBE TABLE ${table}`).toPromise();
-      return res.json({ columns: desc.map(c => c.name) });
-    }
-    const rows = await parseCSV(filePath, delimiter);
-    res.json({ columns: rows.length ? Object.keys(rows[0]) : [] });
+    const client = getClickHouseClient(config);
+    // describe table to get columns
+    const colStream = await client.query({ query: `DESCRIBE TABLE \`${table}\``, format: 'JSON' });
+    const colsJson = await colStream.json();
+    const cols = colsJson.data.map(c => ({ name: c.name, type: c.type }));
+    // count rows
+    const rowStream = await client.query({ query: `SELECT count(*) AS count FROM \`${table}\``, format: 'JSON' });
+    const rowsJson = await rowStream.json();
+    const rowCount = rowsJson.data[0].count;
+    res.json({ cols, rowCount });
   } catch (err) {
+    console.error('Error in /column:', err);
     res.status(500).json({ error: err.message });
   }
 });
 
 module.exports = router;
+

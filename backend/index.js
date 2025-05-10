@@ -3,7 +3,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 
 const connectRouter = require('./routes/connect');
-const columnsRouter = require('./routes/column');
+const columnRouter = require('./routes/column');
 const ingestRouter = require('./routes/ingest');
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(fileUpload());
 
 app.use('/connect', connectRouter);
-app.use('/columns', columnsRouter);
+app.use('/column', columnRouter);
 app.use('/ingest', ingestRouter);
 
 const PORT = 5000;
